@@ -1,0 +1,127 @@
+@import url("https://fonts.cdnfonts.com/css/samsung-sharp-sans-regular");
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Samsung Sharp Sans Bold", sans-serif;
+    line-height: 1.4;
+}
+body {
+    background-color: #000;
+}
+.card_container {
+    perspective: 1000px;
+    width: 400px;
+    height: 300px;
+    margin: 100px auto;
+}
+.card {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.9s ease-in-out;
+}
+.card_container:hover .card {
+    transform: rotateY(180deg);
+}
+.frontcard,
+.backcard {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+.frontcard {
+    background-color: #fff;
+    padding: 20px;
+}
+
+.backcard {
+    position: relative;
+    padding: 20px;
+    border-radius: 15px;
+    background: linear-gradient(90deg, #833ab4, #fd1d1d, #fcb045);
+    background-size: 300% 300%;
+    animation: flow-border 3s linear infinite;
+    transform: rotateY(180deg);
+}
+.backcard-content {
+    background-color: #000;
+    color: #fff;
+    border-radius: 13px;
+    padding: 16px 20px 12px 20px;
+    height: 100%;
+    text-align: left;
+}
+.name {
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: #00bcd4;
+    margin-bottom: 8px;
+}
+.title {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 8px 0;
+}
+.description {
+    font-size: 0.85rem;
+    color: #d8cccc;
+    margin-bottom: 10px;
+}
+strong {
+    color: #faffec;
+    text-transform: capitalize;
+}
+
+
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+.button-group a {
+    text-decoration: none;
+}
+.btn {
+    padding: 6px 17px;
+    border: 1px solid #4caf50;
+    background-color: #000fff;
+    color: black;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s, color 0.3s;
+}
+.btn:hover {
+    background-color: #004382;
+    color: white;
+    border-color: #43a047;
+}
+.kavya-logo {
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 90px;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #833ab4, #fd1d1d, #fcb045);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 2px;
+    font-family: "Samsung Sharp Sans Bold", sans-serif;
+}
